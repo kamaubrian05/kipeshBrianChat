@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chatApplication</title>
+
+
+</head>
+<body>
+<div class ="chat">
+
+    <div class ="chat-messages"></div>
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <textarea class="chat-textarea" id="message2"></textarea>
+    <br>
+
+
+    <input type="text" name="message1" id="message1" placeholder="Type Your Message Here">
+    <button id="Send" class=" btn btn-primary bt-lg bt-block"onsubmit="send_data();" onclick="send_data(); ">Send Message </button>
+    <br>
+
+
+
+    <script type="text/javascript">
+
+        function send_data () {
+
+            var message1 = document.getElementById('message1');
+            var message2 = document.getElementById('message2');
+
+
+            if(document.getElementById('message1').value!=""){
+
+
+                message2.value=message1.value;
+                clearTextBox();
+            }else{
+                alert("Nothing to Send");
+
+            }
+        }
+        function clearTextBox(){
+            document.getElementById('message1').value="";
+
+
+
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+</div>
+
+
+</body>
+</html>
