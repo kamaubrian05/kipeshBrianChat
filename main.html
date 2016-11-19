@@ -25,9 +25,15 @@
                 <div class="input-group">
                     <input type="text" class="form-control" id="message1" placeholder="Text">
                     <div class="input-group-btn">
-                        <button class="btn  btn-primary" id="Send" type="submit" onclick="sendToArea();">Send</button>
+                        <button class="btn  btn-primary" id="Send" type="button" onclick="sendToArea();">Send</button>
                         <script>
+
                             function sendToArea() {
+
+                                document.getElementById("Send").addEventListener("click",function (event) {
+                                    event.preventDefault();
+
+
 
                                 var message1 = document.getElementById('message1');
                                 var message2 = document.getElementById('message2');
@@ -39,6 +45,7 @@
                                 }else{
                                     alert("Nothing To Copy");
                                 }
+                                });
 
 
                             }
