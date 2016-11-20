@@ -41,12 +41,17 @@
 
                                 if(document.getElementById('message1').value !="" ){
                                     message2.value=message1.value;
+                                    clearTextBox();
 
                                 }else{
                                     alert("Nothing To Copy");
                                 }
                                 });
 
+
+                            }
+                            function clearTextBox() {
+                                document.getElementById('message1').value="";
 
                             }
                         </script>
