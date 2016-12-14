@@ -25,9 +25,12 @@
                 <div class="input-group">
                     <input type="text" class="form-control" id="message1" placeholder="Text">
                     <div class="input-group-btn">
-                        <button class="btn  btn-primary" id="Send" type="button" onclick="sendToArea();">Send</button>
+                        <button class="btn  btn-primary" action="ma" id="Send" type="button" onclick="sendToArea();">Send</button>
                         <br>
+
+                        <?php echo phpinfo();?>
                         <!--<button class="btn btn-primary" id = SendFile type="button ">SendFile</button>-->
+
                         <script>
 
                             function sendToArea() {
@@ -56,18 +59,15 @@
 
                             }
 
+
                         </script>
-                        <?php
-                             $filename = "file.txt";
-                             $fp = fopen($filename, "r");
-
-                             $content = fread($fp, filesize($filename));
-                             $lines = explode("\n", $content);
-                             fclose($fp);
-                             print_r($lines);
 
 
-                        ?>
+
+
+
+
+
 
 
 
