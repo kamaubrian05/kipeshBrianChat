@@ -17,54 +17,42 @@
             <div class="form-group">
 
 
-                <textarea class="form-control" rows="25" id="message2"></textarea>
+                <textarea class="form-control" rows="25" id="message2" name="message2"></textarea>
 
             </div>
         </div>
         <div class="row">
             <form action="file.php " class="" >
                 <div class="input-group">
-                    <input type="text" class="form-control" id="message1" placeholder="Text">
+                    <input type="text" class="form-control" id="message1" name="message1" placeholder="Text">
                     <div class="input-group-btn">
-                        <button class="btn  btn-primary" action="ma" id="Send" type="button" onclick="sendToArea();">Send</button>
+                        <form action="file.php" method="get"></form>
+                        <button class="btn  btn-primary"  id="give" onclick="sendToArea()">Send</button>
+                        <button class="btn  btn-primary" action="submit" id="Send" type="submit" >Send To File</button>
 
                         <br>
-                        <button class ="btn btn-primary" id="read " type="button" onclick=";"
+
 
 
                         <!--<button class="btn btn-primary" id = SendFile type="button ">SendFile</button>-->
-
                         <script>
 
                             function sendToArea() {
-
-
-
-
                                 var message1 = document.getElementById('message1');
                                 var message2 = document.getElementById('message2');
 
-
-                                if(document.getElementById('message1').value !="" ){
-                                    message2.value=message1.value;
-                                    clearTextBox();
-
+                                if (message1.value == "") {
+                                    alert("No Message to Send");
                                 }else{
-                                    alert("Nothing To Copy");
+                                    message2.value=message1.value;
                                 }
-                                }
-
-
-
-
-
-                            function clearTextBox() {
-                                document.getElementById('message1').value = "";
-
                             }
 
 
+
+
                         </script>
+
 
 
 
