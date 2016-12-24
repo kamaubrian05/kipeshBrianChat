@@ -22,13 +22,14 @@
             </div>
         </div>
         <div class="row">
-            <form action="file.php " class="" >
+
                 <div class="input-group">
                     <input type="text" class="form-control" id="message1" name="message1" placeholder="Text">
                     <div class="input-group-btn">
-                        <form action="file.php" method="get"></form>
-                        <button class="btn  btn-primary"  id="give" onclick="sendToArea()">Send</button>
-                        <button class="btn  btn-primary" action="submit" id="Send" type="submit" >Send To File</button>
+                        <button class="btn btn-primary" id="give" onclick="sendToArea();">Send</button>
+                        <form action="file.php" method="get">
+                        <button class="btn default"  id="Send" type="submit" >Send To File</button>
+                        </form>
 
                         <br>
 
@@ -69,7 +70,7 @@
 
                 </div>
 
-            </form>
+
 
         </div>
 
